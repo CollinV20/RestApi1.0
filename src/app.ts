@@ -7,7 +7,6 @@ import { Server } from "./presentation/server";
     main();
 })();
 
-//hola como estas bebe
 
 function main() {
 
