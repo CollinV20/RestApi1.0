@@ -38,12 +38,6 @@ const server = http2.createSecureServer({
         res.end()
     }
 
-
-    // else {
-    //     res.writeHead(400, { ' Content-Type': 'text/html' });
-    //     res.end()
-    // }
-
 })
 
 server.listen(8080, () => {

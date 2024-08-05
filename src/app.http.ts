@@ -25,14 +25,6 @@ const server = http.createServer((req, res) => {
     } else if (req.url?.endsWith('.css')) {
         res.writeHead(200, { "Content-type": "text/css" });
     }
-
-
-
-    // else {
-    //     res.writeHead(400, { ' Content-Type': 'text/html' });
-    //     res.end()
-    // }
-
 })
 
 server.listen(8080, () => {
