@@ -3,22 +3,9 @@ import { Request, Response } from 'express';
 import { prisma } from '../../data/postgres/index'
 import { CreateTodoDto, UpdateTodosDto } from '../../domain/dtos/index'
 
-
-
-interface newUser {
-    id: number | any,
-    name: string,
-    lastName: string,
-    gender: string,
-    date: Date
-}
-
-
 export class TodoControllers {
 
-    constructor() {
-
-    }
+    constructor() { }
 
     public getTodos = async (req: Request, res: Response) => {
 
@@ -79,7 +66,7 @@ export class TodoControllers {
 
     public editTodo = async (req: Request, res: Response) => {
         const id = parseInt(req.params.id);
-        const [error, updateTodosDto] = UpdateTodosDto.update({...req.body, id})
+        const [error, updateTodosDto] = UpdateTodosDto.update({ ...req.body, id })
 
         if (error) return res.status(404).json({ error: error })
 

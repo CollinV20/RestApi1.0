@@ -29,13 +29,11 @@ export class Server {
         this.app.use(express.static(this.publicPath));
 
         //* Middleware
-        this.app.use(express.json())
-        this.app.use(bodyParser.json())
+        this.app.use(express.json()); // raw
+        this.app.use(express.urlencoded({ extended: true })); // x-www-form-urlencode
 
         //*Routes 
         this.app.use(this.routes)
-
-
 
 
         //* SPA

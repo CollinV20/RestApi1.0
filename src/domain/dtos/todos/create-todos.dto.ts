@@ -9,6 +9,7 @@ export class CreateTodoDto {
         public readonly date: Date,
     ) { }
 
+
     static create(props: { [key: string]: any }): [string?, CreateTodoDto?] {
 
         const { name, lastName, gender = 'N/A', date = new Date() } = props
